@@ -1,4 +1,4 @@
-// provider declaration
+// google provider declaration
 provider "google" {
   project = var.project_id
   region  = var.region
