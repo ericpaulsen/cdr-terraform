@@ -1,17 +1,17 @@
-# provider declaration
+// provider declaration
 provider "google" {
   project = var.project_id
   region  = var.region
 }
 
-# VPC
+// create vpc
 resource "google_compute_network" "vpc" {
   name                    = "${var.name}-vpc"
   project                 = var.project_id
   auto_create_subnetworks = "false"
 }
 
-# subnet
+// create subnet
 resource "google_compute_subnetwork" "subnet" {
   name          = "${var.name}-subnet"
   project       = var.project_id
@@ -20,7 +20,7 @@ resource "google_compute_subnetwork" "subnet" {
   ip_cidr_range = "10.10.0.0/24"
 }
 
-# k8s cluster
+// create gke cluster
 resource "google_container_cluster" "primary" {
   name               = "${var.name}-cluster"
   location           = var.region
@@ -33,6 +33,7 @@ resource "google_container_cluster" "primary" {
   }
 }
 
+// create separately managed node pool
 resource "google_container_node_pool" "primary_nodes" {
   name       = "${var.name}-node-pool"
   location   = var.region

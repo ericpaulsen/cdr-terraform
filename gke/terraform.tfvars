@@ -1,4 +1,4 @@
-# variables to be set globally
+// variables to be set globally
 
 project_id    = "coder-dev-1"
 region        = "us-central1"

@@ -1,4 +1,4 @@
-# variable declarations
+// variable declarations
 
 variable "region" {}
 variable "project_id" {}
