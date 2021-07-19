@@ -1,4 +1,4 @@
-//export access token for auth into k8s cluster
+// export access token for auth into k8s cluster
 data "google_client_config" "default" {}
 
 // k8s provider declaration & auth
