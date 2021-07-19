@@ -28,6 +28,7 @@ resource "google_container_cluster" "primary" {
   network            = google_compute_network.vpc.name
   subnetwork         = google_compute_subnetwork.subnet.name
   initial_node_count = 1
+  logging_service    = var.logging
   network_policy {
     enabled = true
   }
@@ -47,13 +48,14 @@ resource "google_container_node_pool" "primary_nodes" {
       "https://www.googleapis.com/auth/monitoring",
     ]
 
+    disk_type    = var.disk_type
+    disk_size_gb = var.disk_size_gb
+    machine_type = var.machine_type
+    image_type   = var.image_type
+    tags         = ["gke-node", "${var.project_id}-gke"]
     labels = {
       env = var.project_id
     }
-
-    # preemptible  = true
-    machine_type = "n1-standard-2"
-    tags         = ["gke-node", "${var.project_id}-gke"]
     metadata = {
       disable-legacy-endpoints = "true"
     }
