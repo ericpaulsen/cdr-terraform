@@ -57,7 +57,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "primary_nodes" {
   kubernetes_cluster_id = azurerm_kubernetes_cluster.primary.id
   enable_auto_scaling   = true
   vm_size               = var.node_vm_size
-  max_count             = 4
-  min_count             = 1
+  max_count             = var.max_count
+  min_count             = var.min_count
   os_disk_size_gb       = var.os_disk_size_gb
 }

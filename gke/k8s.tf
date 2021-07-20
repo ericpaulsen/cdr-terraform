@@ -29,6 +29,6 @@ resource "helm_release" "cdr-chart" {
   name       = "cdr-chart"
   repository = "https://helm.coder.com"
   chart      = "coder"
-  version    = "1.20"
-  namespace  = "coder"
+  version    = var.coder_version
+  namespace  = var.namespace
 }
