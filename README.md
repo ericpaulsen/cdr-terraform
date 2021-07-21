@@ -5,11 +5,11 @@ You can use this repo to quickly deploy Coder, or as a template for a custom Cod
 
 ## Structure
 
-Within each directory is a `main.tf` file, which serves as the Terraform entry point.
+Within each directory is a `main.tf` file, which serves as the entry point for Terraform.
 It defines the required providers Terraform will use to provision the infrastructure.
 In this case, Coder needs the following providers:
 
-- Cloud provider
+- AWS, Azure, GCP, etc.
 - Kubernetes
 - Helm
 
@@ -35,9 +35,9 @@ You are expected to change these values accordingly.
 1. [Install Terraform](https://www.terraform.io/downloads.html)
 1. [Install `kubectl`](https://kubernetes.io/docs/tasks/tools/)
 1. Clone this repository
-1. `cd` into the cloud provider of your choice
+1. `cd` into your cloud provider directory
 1. Run `terraform init` to initialize Terraform
-1. Make the necessary changes to the `terraform.tfvars` file
+1. Define your variables in the `terraform.tfvars` file
 1. Run `terraform plan` to view the resources Terraform will create
 1. Run `terraform apply` to provision such resources & install Coder
 
@@ -48,7 +48,7 @@ To do this, take the following steps:
 
 1. Run the cloud provider-specific command to connect to your cluster
 1. Run `kubectl get svc -n coder`
-1. Paste the `EXTERNAL_IP` value in your browser
+1. Copy & paste the `EXTERNAL_IP` value in your browser
 
 ### Documentation References
 
