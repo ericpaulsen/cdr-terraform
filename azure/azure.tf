@@ -52,6 +52,7 @@ resource "azurerm_kubernetes_cluster" "primary" {
   }
 }
 
+// create separately managed node pool
 resource "azurerm_kubernetes_cluster_node_pool" "primary_nodes" {
   name                  = "${var.name}akspool"
   kubernetes_cluster_id = azurerm_kubernetes_cluster.primary.id
