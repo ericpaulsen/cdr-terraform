@@ -1,12 +1,9 @@
----
-title: Coder Terraform Scripts
----
-## Deploying Coder via Terraform
+# Deploying Coder via Terraform
 
 These Terraform scripts automate Coder's installation and the provisioning of its necessary infrastructure on the major cloud providers.
 You can use this repo to quickly deploy Coder, or as a template for a custom Coder installation.
 
-### Structure
+## Structure
 
 Within each directory is a `main.tf` file, which serves as the Terraform entry point.
 It defines the required providers Terraform will use to provision the infrastructure.
@@ -33,7 +30,7 @@ Once the above resources are created, the `k8s.tf` file steps through the follow
 Note that the `terraform.tfvars` file contains the variable definitions.
 You are expected to change these values accordingly.
 
-### Usage
+## Usage
 
 1. [Install Terraform](https://www.terraform.io/downloads.html)
 1. [Install `kubectl`](https://kubernetes.io/docs/tasks/tools/)
@@ -44,7 +41,7 @@ You are expected to change these values accordingly.
 1. Run `terraform plan` to view the resources Terraform will create
 1. Run `terraform apply` to provision such resources & install Coder
 
-### Accessing Coder
+## Accessing Coder
 
 Once `terraform apply` is complete, you'll need to access Coder via the external IP of the ingress controller.
 To do this, take the following steps:
