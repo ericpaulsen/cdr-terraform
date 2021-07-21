@@ -1,6 +1,9 @@
+---
+title: Coder Terraform Scripts
+---
 ## Deploying Coder via Terraform
 
-These Terraform scripts automates Coder's installation and the provisioning of its necessary infrastructure on the major cloud providers.
+These Terraform scripts automate Coder's installation and the provisioning of its necessary infrastructure on the major cloud providers.
 You can use this repo to quickly deploy Coder, or as a template for a custom Coder installation.
 
 ### Structure
@@ -33,6 +36,7 @@ You are expected to change these values accordingly.
 ### Usage
 
 1. [Install Terraform](https://www.terraform.io/downloads.html)
+1. [Install `kubectl`](https://kubernetes.io/docs/tasks/tools/)
 1. Clone this repository
 1. `cd` into the cloud provider of your choice
 1. Run `terraform init` to initialize Terraform
