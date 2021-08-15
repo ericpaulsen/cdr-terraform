@@ -4,6 +4,10 @@ data "google_client_config" "default" {}
 data "google_container_cluster" "primary" {
   name     = "${var.name}-cluster"
   location = var.zone
+  
+  depends_on = [
+    google_container_cluster.primary,
+  ]
 }
 
 // k8s provider declaration & auth
