@@ -1,5 +1,10 @@
 // export access token for auth into cluster
 data "google_client_config" "default" {}
+  
+data "google_container_cluster" "primary" {
+  name     = "${var.name}-cluster"
+  location = var.zone
+}
 
 // k8s provider declaration & auth
 provider "kubernetes" {
