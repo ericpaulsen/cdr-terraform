@@ -1,4 +1,4 @@
-// reference azure terraform provider
+// azure provider declaration
 provider "azurerm" {
   features {}
 }
@@ -13,7 +13,7 @@ resource "azurerm_resource_group" "primary" {
 resource "azurerm_virtual_network" "cluster-network" {
   name                = "${var.name}-vnet"
   location            = var.location
-  address_space       = var.address_space
+  address_space       = [var.address_space]
   resource_group_name = azurerm_resource_group.primary.name
 }
 

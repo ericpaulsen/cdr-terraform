@@ -24,9 +24,9 @@ provider "helm" {
   }
 }
 
-// pull down Coder helm chart & install it
+// pull down coder helm chart & install it
 resource "helm_release" "cdr-chart" {
-  name       = "cdr-chart"
+  name       = "coder"
   repository = "https://helm.coder.com"
   chart      = "coder"
   version    = var.coder_version

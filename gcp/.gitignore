@@ -1,3 +1,6 @@
 .terraform
 .terraform.lock.hcl
 terraform.tfstate*
+.json
+.yaml
+.yml

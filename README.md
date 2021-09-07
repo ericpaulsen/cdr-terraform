@@ -1,7 +1,6 @@
 # Deploying Coder via Terraform
 
-These Terraform scripts automate Coder's installation and the provisioning of its necessary infrastructure on the major cloud providers (AWS coming soon).
-You can use this repo to quickly deploy Coder, or as a template for a custom Coder installation.
+These Terraform scripts automate Coder's installation and the provisioning of its necessary infrastructure on the major cloud providers. You can use this repo to quickly deploy Coder, or as a template for a custom Coder installation.
 
 ## Structure
 
