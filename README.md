@@ -27,7 +27,7 @@ Once the above resources are created, the `k8s.tf` file steps through the follow
 1. Helm install of Coder
 
 Note that the `terraform.tfvars` file contains the variable definitions.
-You are expected to change these values accordingly.
+You are expected to change these values prior to running `terraform apply`.
 
 ## Usage
 
@@ -49,7 +49,7 @@ To do this, take the following steps:
 1. Run `kubectl get svc -n coder`
 1. Copy & paste the `EXTERNAL_IP` value in your browser
 
-### Documentation References
+## Documentation References
 
 - [Coder](https://coder.com/docs/coder/latest)
 - [Terraform](https://www.terraform.io/intro/index.html)
