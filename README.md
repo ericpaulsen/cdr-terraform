@@ -53,3 +53,5 @@ To do this, take the following steps:
 
 - [Coder](https://coder.com/docs/coder/latest)
 - [Terraform](https://www.terraform.io/intro/index.html)
+
+[![Open in Coder](https://cdn.coder.com/embed-button.svg)](https://demo-2.cdr.dev/workspaces/git?org=default&image=5fb2c184-c1b2ca2a9809b9c67a39168f&tag=ubuntu&service=gitlab&repo=git@github.com:ericpaulsen/cdr-terraform.git)
